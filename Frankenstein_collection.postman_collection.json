@@ -26,7 +26,7 @@
 							"            pm.expect(jsonData.user.id).to.be.an(\"number\");                         //Asserting fields in user object\r",
 							"            pm.expect(jsonData.user.email).to.be.an(\"string\");\r",
 							"            pm.expect(jsonData.user.avatar).to.be.an(\"null\");                       \r",
-							"            pm.expect(jsonData.user.fullName).to.be.an(\"string\");\r",
+							"            pm.expect(jsonData.user.fullName).to.be.an(\"number\");\r",
 							"            pm.expect(jsonData.user.isPublic).to.be.an(\"boolean\");\r",
 							"            pm.expect(jsonData.user.isPublic).to.eql(false)\r",
 							"\r",
