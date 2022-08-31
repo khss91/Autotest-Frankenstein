@@ -7,12 +7,12 @@ on:
 
 jobs:
   run-tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: matt-ball/newman-action@v1.0.4
-
-      - name: Performing tests
-      - run: cd
+    
+        - uses: actions/checkout@v3
+        
+# matt-ball/newman-action@v1.0.4
+        - name: Trying to use cd
+        - run: cd
