@@ -40,7 +40,7 @@
 							"            pm.expect(jsonData.operations[0].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the first element of array\r",
 							"            pm.expect(jsonData.operations[0].name).to.eql(\"file_storage_limit\");    //Asserting a \"name\" field value in the first element of array\r",
 							"            pm.expect(jsonData.operations[0].limit).to.be.an(\"number\");\r",
-							"            pm.expect(jsonData.operations[0].limit).to.eql(20);\r",
+							"            pm.expect(jsonData.operations[0].limit).to.eql(100);\r",
 							"            pm.expect(jsonData.operations[0].usage).to.be.an(\"number\");\r",
 							"            pm.expect(jsonData.operations[0].overage).to.be.an(\"number\");\r",
 							"\r",
