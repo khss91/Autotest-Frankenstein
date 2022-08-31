@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "87a1dc20-538d-4727-a74f-ca217e9922ce",
+		"name": "Frankenstein collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1513725"
+	},
+	"item": [
+		{
+			"name": "Frankenstein request 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verifying response code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// pull update\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Validating response fields and types of data\", () => {\r",
+							"\r",
+							"    pm.expect(jsonData).to.be.an(\"object\");\r",
+							"\r",
+							"        pm.expect(jsonData.user).to.be.an(\"object\");\r",
+							"            pm.expect(jsonData.user.id).to.be.an(\"number\");                         //Asserting fields in user object\r",
+							"            pm.expect(jsonData.user.email).to.be.an(\"string\");\r",
+							"            pm.expect(jsonData.user.avatar).to.be.an(\"null\");                       \r",
+							"            pm.expect(jsonData.user.fullName).to.be.an(\"string\");\r",
+							"            pm.expect(jsonData.user.isPublic).to.be.an(\"boolean\");\r",
+							"            pm.expect(jsonData.user.isPublic).to.eql(false)\r",
+							"\r",
+							"        pm.expect(jsonData.operations).to.be.an(\"array\");\r",
+							"\r",
+							"            for(var i=0; i < jsonData.operations.length; i++){                //Checking an every element of the array and verifying that it has an object type\r",
+							"                pm.expect(jsonData.operations[i]).to.be.an(\"object\");\r",
+							"                console.log(jsonData.operations[i]);\r",
+							"            };\r",
+							"\r",
+							"            pm.expect(jsonData.operations[0].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the first element of array\r",
+							"            pm.expect(jsonData.operations[0].name).to.eql(\"file_storage_limit\");    //Asserting a \"name\" field value in the first element of array\r",
+							"            pm.expect(jsonData.operations[0].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[0].limit).to.eql(20);\r",
+							"            pm.expect(jsonData.operations[0].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[0].overage).to.be.an(\"number\");\r",
+							"\r",
+							"            pm.expect(jsonData.operations[1].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the second element of array\r",
+							"            pm.expect(jsonData.operations[1].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[1].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[1].overage).to.be.an(\"number\");\r",
+							"\r",
+							"            pm.expect(jsonData.operations[2].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the third element of array\r",
+							"            pm.expect(jsonData.operations[2].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[2].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[2].overage).to.be.an(\"number\");\r",
+							"        \r",
+							"            pm.expect(jsonData.operations[3].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the fourth element of array\r",
+							"            pm.expect(jsonData.operations[3].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[3].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[3].overage).to.be.an(\"number\");\r",
+							"\r",
+							"            pm.expect(jsonData.operations[4].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the fifth element of array\r",
+							"            pm.expect(jsonData.operations[4].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[4].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[4].overage).to.be.an(\"number\");\r",
+							"\r",
+							"            pm.expect(jsonData.operations[5].name).to.be.an(\"string\");              //Asserting a \"name\" field value type in the sixth element of array\r",
+							"            pm.expect(jsonData.operations[5].limit).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[5].usage).to.be.an(\"number\");\r",
+							"            pm.expect(jsonData.operations[5].overage).to.be.an(\"number\");\r",
+							"\r",
+							"\r",
+							"/* Here are the same checks as in 20-54 lines, but in more cultural representation:\r",
+							"\r",
+							"for(var k=0; i < jsonData.operations[k]; k++) {\r",
+							"        pm.expect(jsonData.operations[k]).to.be.an(\"object\");\r",
+							"        pm.expect(jsonData.operations[k].name).to.be.an(\"string\");\r",
+							"        pm.expect(jsonData.operations[k].limit).to.be.an(\"number\");\r",
+							"        pm.expect(jsonData.operations[k].usage).to.be.an(\"number\");\r",
+							"        pm.expect(jsonData.operations[k].overage).to.be.an(\"number\");\r",
+							"};\r",
+							"*/\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "PMAK-630167e2a04a791033ee2551-d74d644e6b8f817d29ed57e2bc1f97e10d",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.getpostman.com/me",
+					"protocol": "https",
+					"host": [
+						"api",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
