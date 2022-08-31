@@ -18,7 +18,7 @@ jobs:
       - uses: matt-ball/newman-action@master
         with:
           collection: Frankenstein_collection.postman_collection.json
-          environment: postman_environment.json
+          environment: New_Environment.postman_environment.json
 
       - name: Performing tests
         run: newman run Frankenstein_collection.postman_collection.json
