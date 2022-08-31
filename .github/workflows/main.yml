@@ -11,8 +11,9 @@ jobs:
 
     steps:
     
-        - uses: actions/checkout@v3
+      - name: Cloning repo
+        uses: actions/checkout@v3
         
 # matt-ball/newman-action@v1.0.4
-        - name: Trying to use cd
-        - run: cd
+      - name: Trying to use cd
+        run: cd
