@@ -14,8 +14,8 @@ jobs:
       - name: Cloning repo
         uses: actions/checkout@v3
         
-      - name: Setting up Newman
+      - name: Newman Action
         uses: matt-ball/newman-action@v1.0.4
-        
+
       - name: Performing tests
         run: newman run Frankenstein_collection.postman_collection.json
