@@ -14,6 +14,7 @@ jobs:
       - name: Cloning repo
         uses: actions/checkout@v3
         
+      - name: Setting up Newman and passing collection/environment names
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
