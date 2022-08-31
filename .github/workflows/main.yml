@@ -17,4 +17,4 @@ jobs:
       - uses: matt-ball/newman-action@v1.0.4
 
       - name: Performing tests
-        run: cd
+      - run: cd
